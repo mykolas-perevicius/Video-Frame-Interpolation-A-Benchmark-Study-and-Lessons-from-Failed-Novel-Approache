@@ -1,0 +1,90 @@
+{
+  "generated_at": "2025-12-15T23:44:06.797127",
+  "total_experiments": 30,
+  "unique_methods": 17,
+  "intervals_tested": [
+    "11.3",
+    "59.9",
+    "53.6",
+    "9.3"
+  ],
+  "hard_content": [
+    {
+      "name": "bicubic_blend_edge",
+      "psnr_db": 31.56,
+      "time_s": 10.47
+    },
+    {
+      "name": "lanczos_blend_edge",
+      "psnr_db": 31.52,
+      "time_s": 16.58
+    },
+    {
+      "name": "optical_flow_edge",
+      "psnr_db": 31.52,
+      "time_s": 19.15
+    }
+  ],
+  "easy_content": [
+    {
+      "name": "lanczos_blend",
+      "psnr_db": 35.63,
+      "time_s": 18.73,
+      "interval_id": "11.3"
+    },
+    {
+      "name": "optical_flow_basic",
+      "psnr_db": 35.63,
+      "time_s": 26.05,
+      "interval_id": "11.3"
+    },
+    {
+      "name": "rife_default",
+      "psnr_db": 35.61,
+      "time_s": 70.74,
+      "interval_id": "9.3"
+    },
+    {
+      "name": "adaptive_conservative",
+      "psnr_db": 35.61,
+      "time_s": 16.11,
+      "interval_id": "9.3"
+    },
+    {
+      "name": "adaptive_default",
+      "psnr_db": 35.61,
+      "time_s": 19.94,
+      "interval_id": "9.3"
+    }
+  ],
+  "novel_methods": [
+    {
+      "name": "uafi_default",
+      "psnr_db": 31.52,
+      "time_s": 231.38,
+      "interval": "53.6",
+      "insight": "UI-aware, matches best linear on same interval"
+    },
+    {
+      "name": "ughi_default",
+      "psnr_db": 31.52,
+      "time_s": 407.05,
+      "interval": "53.6",
+      "insight": "Uncertainty-guided, matches best linear on same interval"
+    },
+    {
+      "name": "mcar_default",
+      "psnr_db": 35.61,
+      "time_s": 133.92,
+      "interval": "9.3",
+      "insight": "Adaptive routing, same quality as RIFE"
+    },
+    {
+      "name": "mcar_aggressive",
+      "psnr_db": 35.61,
+      "time_s": 136.23,
+      "interval": "9.3",
+      "insight": "Adaptive routing, same quality as RIFE"
+    }
+  ]
+}

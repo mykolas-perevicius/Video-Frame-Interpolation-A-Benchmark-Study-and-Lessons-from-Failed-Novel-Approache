@@ -1,0 +1,23 @@
+
+\begin{table}[h]
+\centering
+\caption{VFI Method Comparison (Normalized to Baseline)}
+\label{tab:vfi_comparison}
+\begin{tabular}{lccccc}
+\toprule
+Method & Category & PSNR Gain & Time & Efficiency \\
+\midrule
+bicubic\_blend\_edge & Linear Blend & +0.36 dB & 0.8x & +0.44 \\
+optical\_flow\_edge & Optical Flow & +0.32 dB & 1.5x & +0.21 \\
+lanczos\_blend\_edge & Linear Blend & +0.32 dB & 1.3x & +0.25 \\
+uafi\_default & UAFI (Novel) & +0.32 dB & 18.0x & +0.02 \\
+ughi\_default & UGHI (Novel) & +0.32 dB & 31.7x & +0.01 \\
+optical\_flow\_basic & Optical Flow & +0.23 dB & 1.7x & +0.14 \\
+lanczos\_blend & Linear Blend & +0.23 dB & 1.2x & +0.19 \\
+bicubic\_blend & Linear Blend & +0.00 dB & 1.0x & +0.00 \\
+optical\_flow\_sharp & Optical Flow & -0.09 dB & 1.5x & -0.06 \\
+lanczos\_blend\_sharp & Linear Blend & -0.09 dB & 1.0x & -0.09 \\
+
+\bottomrule
+\end{tabular}
+\end{table}

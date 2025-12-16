@@ -1,0 +1,23 @@
+{
+  "interval_id": "interval_0003",
+  "clip_id": "arc_raiders_001",
+  "start_s": 57.989999999999995,
+  "end_s": 67.99,
+  "start_frame": 3440,
+  "end_frame": 4033,
+  "keyframe_count": 297,
+  "midpoint_count": 296,
+  "resolution": "1920x1080",
+  "difficulty": "MEDIUM",
+  "motion_stats": {
+    "mean_flow": 7.400551108737804,
+    "max_flow": 630.8367919921875,
+    "variance": 64.94593605384199,
+    "static_pct": 29.1,
+    "easy_pct": 23.0,
+    "medium_pct": 30.7,
+    "hard_pct": 16.2,
+    "extreme_pct": 1.0
+  },
+  "extracted": "2025-12-16T03:09:35.233351"
+}

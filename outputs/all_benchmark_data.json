@@ -1,0 +1,837 @@
+{
+  "consolidated_at": "2025-12-15T16:34:46.585804",
+  "sources": [
+    "/home/myko/CS474/gaming-vfisr-complete/outputs/benchmark/clips_metadata.json",
+    "/home/myko/CS474/gaming-vfisr-complete/outputs/benchmark/benchmark_results.json",
+    "/home/myko/CS474/gaming-vfisr-complete/outputs/benchmarks/benchmark_results.json",
+    "/home/myko/CS474/gaming-vfisr-complete/outputs/blind_study_videos/clips_metadata.json",
+    "/home/myko/CS474/gaming-vfisr-complete/outputs/blind_study_videos/sota_metadata.json"
+  ],
+  "benchmark_runs": [
+    {
+      "source_file": "/home/myko/CS474/gaming-vfisr-complete/outputs/benchmark/clips_metadata.json",
+      "type": "10s_clips_with_audio",
+      "resolution": "3840x2160",
+      "input_resolution": "960x540",
+      "fps": 120,
+      "duration_seconds": 10.0,
+      "start_time": 11.4,
+      "clips": [
+        {
+          "model": "control",
+          "output_path": "outputs/benchmark/control.mp4",
+          "frame_count": 1185,
+          "fps": 120,
+          "duration_seconds": 9.88,
+          "resolution": "3840x2160",
+          "processing_time": 83.3,
+          "file_size_mb": 193.16,
+          "bitrate_mbps": 164.09,
+          "vfi_method": "none",
+          "sr_method": "control",
+          "is_control": true,
+          "is_degraded": false,
+          "psnr_db": 13.77,
+          "ssim": 0.2576
+        },
+        {
+          "model": "degraded",
+          "output_path": "outputs/benchmark/degraded.mp4",
+          "frame_count": 1185,
+          "fps": 120,
+          "duration_seconds": 9.88,
+          "resolution": "3840x2160",
+          "processing_time": 57.1,
+          "file_size_mb": 104.37,
+          "bitrate_mbps": 88.66,
+          "vfi_method": "frame_dup",
+          "sr_method": "degraded",
+          "is_control": false,
+          "is_degraded": true,
+          "psnr_db": 13.38,
+          "ssim": 0.2591
+        },
+        {
+          "model": "lanczos",
+          "output_path": "outputs/benchmark/lanczos.mp4",
+          "frame_count": 1185,
+          "fps": 120,
+          "duration_seconds": 9.88,
+          "resolution": "3840x2160",
+          "processing_time": 82.8,
+          "file_size_mb": 142.1,
+          "bitrate_mbps": 120.71,
+          "vfi_method": "linear_blend",
+          "sr_method": "lanczos",
+          "is_control": false,
+          "is_degraded": false,
+          "psnr_db": 13.39,
+          "ssim": 0.2592
+        },
+        {
+          "model": "rife_lanczos",
+          "output_path": "outputs/benchmark/rife_lanczos.mp4",
+          "frame_count": 1185,
+          "fps": 120,
+          "duration_seconds": 9.88,
+          "resolution": "3840x2160",
+          "processing_time": 456.4,
+          "file_size_mb": 165.25,
+          "bitrate_mbps": 140.38,
+          "vfi_method": "RIFE",
+          "sr_method": "rife_lanczos",
+          "is_control": false,
+          "is_degraded": false,
+          "psnr_db": 13.39,
+          "ssim": 0.2592
+        },
+        {
+          "model": "adaptive_vfi",
+          "output_path": "outputs/benchmark/adaptive_vfi.mp4",
+          "frame_count": 1185,
+          "fps": 120,
+          "duration_seconds": 9.88,
+          "resolution": "3840x2160",
+          "processing_time": 85.5,
+          "file_size_mb": 166.06,
+          "bitrate_mbps": 141.07,
+          "vfi_method": "adaptive",
+          "sr_method": "adaptive_vfi",
+          "is_control": false,
+          "is_degraded": false,
+          "psnr_db": 13.37,
+          "ssim": 0.2583
+        }
+      ]
+    },
+    {
+      "source_file": "/home/myko/CS474/gaming-vfisr-complete/outputs/benchmark/benchmark_results.json",
+      "type": "benchmark_results",
+      "methods": [
+        {
+          "method": "bicubic",
+          "frames": 1197,
+          "time_s": 65.4,
+          "fps": 18.3,
+          "psnr_db": 33.72,
+          "ssim": 0.9952,
+          "realtime_x": 0.15
+        },
+        {
+          "method": "lanczos",
+          "frames": 1197,
+          "time_s": 70.1,
+          "fps": 17.1,
+          "psnr_db": 33.95,
+          "ssim": 0.9955,
+          "realtime_x": 0.14
+        },
+        {
+          "method": "optical_flow",
+          "frames": 1197,
+          "time_s": 139.3,
+          "fps": 8.6,
+          "psnr_db": 33.95,
+          "ssim": 0.9955,
+          "realtime_x": 0.07
+        },
+        {
+          "method": "rife_bicubic",
+          "frames": 1197,
+          "time_s": 466.3,
+          "fps": 2.6,
+          "psnr_db": 33.72,
+          "ssim": 0.9952,
+          "realtime_x": 0.02
+        },
+        {
+          "method": "rife_lanczos",
+          "frames": 1197,
+          "time_s": 459.5,
+          "fps": 2.6,
+          "psnr_db": 33.95,
+          "ssim": 0.9955,
+          "realtime_x": 0.02
+        },
+        {
+          "method": "lanczos_edge",
+          "frames": 1197,
+          "time_s": 68.4,
+          "fps": 17.5,
+          "psnr_db": 33.93,
+          "ssim": 0.9955,
+          "realtime_x": 0.15
+        },
+        {
+          "method": "adaptive_vfi",
+          "frames": 1197,
+          "time_s": 87.3,
+          "fps": 13.7,
+          "psnr_db": 33.93,
+          "ssim": 0.9955,
+          "realtime_x": 0.11
+        }
+      ],
+      "by_quality": [
+        {
+          "method": "lanczos",
+          "frames": 1197,
+          "time_s": 70.1,
+          "fps": 17.1,
+          "psnr_db": 33.95,
+          "ssim": 0.9955,
+          "realtime_x": 0.14
+        },
+        {
+          "method": "optical_flow",
+          "frames": 1197,
+          "time_s": 139.3,
+          "fps": 8.6,
+          "psnr_db": 33.95,
+          "ssim": 0.9955,
+          "realtime_x": 0.07
+        },
+        {
+          "method": "rife_lanczos",
+          "frames": 1197,
+          "time_s": 459.5,
+          "fps": 2.6,
+          "psnr_db": 33.95,
+          "ssim": 0.9955,
+          "realtime_x": 0.02
+        },
+        {
+          "method": "lanczos_edge",
+          "frames": 1197,
+          "time_s": 68.4,
+          "fps": 17.5,
+          "psnr_db": 33.93,
+          "ssim": 0.9955,
+          "realtime_x": 0.15
+        },
+        {
+          "method": "adaptive_vfi",
+          "frames": 1197,
+          "time_s": 87.3,
+          "fps": 13.7,
+          "psnr_db": 33.93,
+          "ssim": 0.9955,
+          "realtime_x": 0.11
+        },
+        {
+          "method": "bicubic",
+          "frames": 1197,
+          "time_s": 65.4,
+          "fps": 18.3,
+          "psnr_db": 33.72,
+          "ssim": 0.9952,
+          "realtime_x": 0.15
+        },
+        {
+          "method": "rife_bicubic",
+          "frames": 1197,
+          "time_s": 466.3,
+          "fps": 2.6,
+          "psnr_db": 33.72,
+          "ssim": 0.9952,
+          "realtime_x": 0.02
+        }
+      ],
+      "by_speed": [
+        {
+          "method": "bicubic",
+          "frames": 1197,
+          "time_s": 65.4,
+          "fps": 18.3,
+          "psnr_db": 33.72,
+          "ssim": 0.9952,
+          "realtime_x": 0.15
+        },
+        {
+          "method": "lanczos_edge",
+          "frames": 1197,
+          "time_s": 68.4,
+          "fps": 17.5,
+          "psnr_db": 33.93,
+          "ssim": 0.9955,
+          "realtime_x": 0.15
+        },
+        {
+          "method": "lanczos",
+          "frames": 1197,
+          "time_s": 70.1,
+          "fps": 17.1,
+          "psnr_db": 33.95,
+          "ssim": 0.9955,
+          "realtime_x": 0.14
+        },
+        {
+          "method": "adaptive_vfi",
+          "frames": 1197,
+          "time_s": 87.3,
+          "fps": 13.7,
+          "psnr_db": 33.93,
+          "ssim": 0.9955,
+          "realtime_x": 0.11
+        },
+        {
+          "method": "optical_flow",
+          "frames": 1197,
+          "time_s": 139.3,
+          "fps": 8.6,
+          "psnr_db": 33.95,
+          "ssim": 0.9955,
+          "realtime_x": 0.07
+        },
+        {
+          "method": "rife_lanczos",
+          "frames": 1197,
+          "time_s": 459.5,
+          "fps": 2.6,
+          "psnr_db": 33.95,
+          "ssim": 0.9955,
+          "realtime_x": 0.02
+        },
+        {
+          "method": "rife_bicubic",
+          "frames": 1197,
+          "time_s": 466.3,
+          "fps": 2.6,
+          "psnr_db": 33.72,
+          "ssim": 0.9952,
+          "realtime_x": 0.02
+        }
+      ]
+    },
+    {
+      "source_file": "/home/myko/CS474/gaming-vfisr-complete/outputs/blind_study_videos/clips_metadata.json",
+      "type": "blind_study_videos",
+      "models": [
+        "control",
+        "bicubic",
+        "lanczos",
+        "optical_flow",
+        "rife_bicubic",
+        "rife_lanczos"
+      ],
+      "clips": [
+        {
+          "model": "control",
+          "output_path": "outputs/blind_study_videos/control_h264.mp4",
+          "frame_count": 597,
+          "fps": 120,
+          "duration_seconds": 4.975,
+          "resolution": "3840x2160",
+          "processing_time": 35.51227831840515,
+          "vfi_method": "linear_blend",
+          "sr_method": "control",
+          "is_control": true,
+          "psnr_db": 999,
+          "ssim": 1.0,
+          "degradation": "none"
+        },
+        {
+          "model": "bicubic",
+          "output_path": "outputs/blind_study_videos/bicubic_h264.mp4",
+          "frame_count": 597,
+          "fps": 120,
+          "duration_seconds": 4.975,
+          "resolution": "3840x2160",
+          "processing_time": 31.21634602546692,
+          "vfi_method": "linear_blend",
+          "sr_method": "bicubic",
+          "is_control": false,
+          "psnr_db": 35.6,
+          "ssim": 0.9866,
+          "degradation": "960x540 -> 3840x2160"
+        },
+        {
+          "model": "lanczos",
+          "output_path": "outputs/blind_study_videos/lanczos_h264.mp4",
+          "frame_count": 597,
+          "fps": 120,
+          "duration_seconds": 4.975,
+          "resolution": "3840x2160",
+          "processing_time": 34.05007791519165,
+          "vfi_method": "linear_blend",
+          "sr_method": "lanczos",
+          "is_control": false,
+          "psnr_db": 35.9,
+          "ssim": 0.9876,
+          "degradation": "960x540 -> 3840x2160"
+        },
+        {
+          "model": "optical_flow",
+          "output_path": "outputs/blind_study_videos/optical_flow_h264.mp4",
+          "frame_count": 597,
+          "fps": 120,
+          "duration_seconds": 4.975,
+          "resolution": "3840x2160",
+          "processing_time": 64.53082537651062,
+          "vfi_method": "optical_flow",
+          "sr_method": "optical_flow",
+          "is_control": false,
+          "psnr_db": 35.9,
+          "ssim": 0.9876,
+          "degradation": "960x540 -> 3840x2160"
+        },
+        {
+          "model": "rife_bicubic",
+          "output_path": "outputs/blind_study_videos/rife_bicubic_h264.mp4",
+          "frame_count": 597,
+          "fps": 120,
+          "duration_seconds": 4.975,
+          "resolution": "3840x2160",
+          "processing_time": 177.36271739006042,
+          "vfi_method": "RIFE_v4.25",
+          "sr_method": "bicubic",
+          "psnr_db": 35.6,
+          "ssim": 0.9866,
+          "degradation": "960x540 -> 3840x2160"
+        },
+        {
+          "model": "rife_lanczos",
+          "output_path": "outputs/blind_study_videos/rife_lanczos_h264.mp4",
+          "frame_count": 597,
+          "fps": 120,
+          "duration_seconds": 4.975,
+          "resolution": "3840x2160",
+          "processing_time": 182.24126815795898,
+          "vfi_method": "RIFE_v4.25",
+          "sr_method": "lanczos",
+          "psnr_db": 35.9,
+          "ssim": 0.9876,
+          "degradation": "960x540 -> 3840x2160"
+        }
+      ]
+    }
+  ],
+  "methods_summary": {
+    "control": {
+      "name": "control",
+      "measurements": [
+        {
+          "source": "/home/myko/CS474/gaming-vfisr-complete/outputs/benchmark/clips_metadata.json",
+          "psnr_db": 13.77,
+          "ssim": 0.2576,
+          "processing_time": 83.3,
+          "bitrate_mbps": 164.09,
+          "vfi_method": "none",
+          "file_size_mb": 193.16
+        },
+        {
+          "source": "/home/myko/CS474/gaming-vfisr-complete/outputs/blind_study_videos/clips_metadata.json",
+          "psnr_db": 999,
+          "ssim": 1.0,
+          "processing_time": 35.51227831840515,
+          "bitrate_mbps": null,
+          "vfi_method": "linear_blend",
+          "file_size_mb": null
+        }
+      ],
+      "avg_psnr": 506.385,
+      "avg_ssim": 0.6288,
+      "avg_time": 59.406139159202574,
+      "num_measurements": 2
+    },
+    "degraded": {
+      "name": "degraded",
+      "measurements": [
+        {
+          "source": "/home/myko/CS474/gaming-vfisr-complete/outputs/benchmark/clips_metadata.json",
+          "psnr_db": 13.38,
+          "ssim": 0.2591,
+          "processing_time": 57.1,
+          "bitrate_mbps": 88.66,
+          "vfi_method": "frame_dup",
+          "file_size_mb": 104.37
+        }
+      ],
+      "avg_psnr": 13.38,
+      "avg_ssim": 0.2591,
+      "avg_time": 57.1,
+      "num_measurements": 1
+    },
+    "lanczos": {
+      "name": "lanczos",
+      "measurements": [
+        {
+          "source": "/home/myko/CS474/gaming-vfisr-complete/outputs/benchmark/clips_metadata.json",
+          "psnr_db": 13.39,
+          "ssim": 0.2592,
+          "processing_time": 82.8,
+          "bitrate_mbps": 120.71,
+          "vfi_method": "linear_blend",
+          "file_size_mb": 142.1
+        },
+        {
+          "source": "/home/myko/CS474/gaming-vfisr-complete/outputs/blind_study_videos/clips_metadata.json",
+          "psnr_db": 35.9,
+          "ssim": 0.9876,
+          "processing_time": 34.05007791519165,
+          "bitrate_mbps": null,
+          "vfi_method": "linear_blend",
+          "file_size_mb": null
+        }
+      ],
+      "avg_psnr": 24.645,
+      "avg_ssim": 0.6234,
+      "avg_time": 58.425038957595824,
+      "num_measurements": 2
+    },
+    "rife_lanczos": {
+      "name": "rife_lanczos",
+      "measurements": [
+        {
+          "source": "/home/myko/CS474/gaming-vfisr-complete/outputs/benchmark/clips_metadata.json",
+          "psnr_db": 13.39,
+          "ssim": 0.2592,
+          "processing_time": 456.4,
+          "bitrate_mbps": 140.38,
+          "vfi_method": "RIFE",
+          "file_size_mb": 165.25
+        },
+        {
+          "source": "/home/myko/CS474/gaming-vfisr-complete/outputs/blind_study_videos/clips_metadata.json",
+          "psnr_db": 35.9,
+          "ssim": 0.9876,
+          "processing_time": 182.24126815795898,
+          "bitrate_mbps": null,
+          "vfi_method": "RIFE_v4.25",
+          "file_size_mb": null
+        }
+      ],
+      "avg_psnr": 24.645,
+      "avg_ssim": 0.6234,
+      "avg_time": 319.3206340789795,
+      "num_measurements": 2
+    },
+    "adaptive_vfi": {
+      "name": "adaptive_vfi",
+      "measurements": [
+        {
+          "source": "/home/myko/CS474/gaming-vfisr-complete/outputs/benchmark/clips_metadata.json",
+          "psnr_db": 13.37,
+          "ssim": 0.2583,
+          "processing_time": 85.5,
+          "bitrate_mbps": 141.07,
+          "vfi_method": "adaptive",
+          "file_size_mb": 166.06
+        }
+      ],
+      "avg_psnr": 13.37,
+      "avg_ssim": 0.2583,
+      "avg_time": 85.5,
+      "num_measurements": 1
+    },
+    "bicubic": {
+      "name": "bicubic",
+      "measurements": [
+        {
+          "source": "/home/myko/CS474/gaming-vfisr-complete/outputs/blind_study_videos/clips_metadata.json",
+          "psnr_db": 35.6,
+          "ssim": 0.9866,
+          "processing_time": 31.21634602546692,
+          "bitrate_mbps": null,
+          "vfi_method": "linear_blend",
+          "file_size_mb": null
+        }
+      ],
+      "avg_psnr": 35.6,
+      "avg_ssim": 0.9866,
+      "avg_time": 31.21634602546692,
+      "num_measurements": 1
+    },
+    "optical_flow": {
+      "name": "optical_flow",
+      "measurements": [
+        {
+          "source": "/home/myko/CS474/gaming-vfisr-complete/outputs/blind_study_videos/clips_metadata.json",
+          "psnr_db": 35.9,
+          "ssim": 0.9876,
+          "processing_time": 64.53082537651062,
+          "bitrate_mbps": null,
+          "vfi_method": "optical_flow",
+          "file_size_mb": null
+        }
+      ],
+      "avg_psnr": 35.9,
+      "avg_ssim": 0.9876,
+      "avg_time": 64.53082537651062,
+      "num_measurements": 1
+    },
+    "rife_bicubic": {
+      "name": "rife_bicubic",
+      "measurements": [
+        {
+          "source": "/home/myko/CS474/gaming-vfisr-complete/outputs/blind_study_videos/clips_metadata.json",
+          "psnr_db": 35.6,
+          "ssim": 0.9866,
+          "processing_time": 177.36271739006042,
+          "bitrate_mbps": null,
+          "vfi_method": "RIFE_v4.25",
+          "file_size_mb": null
+        }
+      ],
+      "avg_psnr": 35.6,
+      "avg_ssim": 0.9866,
+      "avg_time": 177.36271739006042,
+      "num_measurements": 1
+    }
+  },
+  "all_clips_metadata": [
+    {
+      "model": "control",
+      "output_path": "outputs/benchmark/control.mp4",
+      "frame_count": 1185,
+      "fps": 120,
+      "duration_seconds": 9.88,
+      "resolution": "3840x2160",
+      "processing_time": 83.3,
+      "file_size_mb": 193.16,
+      "bitrate_mbps": 164.09,
+      "vfi_method": "none",
+      "sr_method": "control",
+      "is_control": true,
+      "is_degraded": false,
+      "psnr_db": 13.77,
+      "ssim": 0.2576
+    },
+    {
+      "model": "degraded",
+      "output_path": "outputs/benchmark/degraded.mp4",
+      "frame_count": 1185,
+      "fps": 120,
+      "duration_seconds": 9.88,
+      "resolution": "3840x2160",
+      "processing_time": 57.1,
+      "file_size_mb": 104.37,
+      "bitrate_mbps": 88.66,
+      "vfi_method": "frame_dup",
+      "sr_method": "degraded",
+      "is_control": false,
+      "is_degraded": true,
+      "psnr_db": 13.38,
+      "ssim": 0.2591
+    },
+    {
+      "model": "lanczos",
+      "output_path": "outputs/benchmark/lanczos.mp4",
+      "frame_count": 1185,
+      "fps": 120,
+      "duration_seconds": 9.88,
+      "resolution": "3840x2160",
+      "processing_time": 82.8,
+      "file_size_mb": 142.1,
+      "bitrate_mbps": 120.71,
+      "vfi_method": "linear_blend",
+      "sr_method": "lanczos",
+      "is_control": false,
+      "is_degraded": false,
+      "psnr_db": 13.39,
+      "ssim": 0.2592
+    },
+    {
+      "model": "rife_lanczos",
+      "output_path": "outputs/benchmark/rife_lanczos.mp4",
+      "frame_count": 1185,
+      "fps": 120,
+      "duration_seconds": 9.88,
+      "resolution": "3840x2160",
+      "processing_time": 456.4,
+      "file_size_mb": 165.25,
+      "bitrate_mbps": 140.38,
+      "vfi_method": "RIFE",
+      "sr_method": "rife_lanczos",
+      "is_control": false,
+      "is_degraded": false,
+      "psnr_db": 13.39,
+      "ssim": 0.2592
+    },
+    {
+      "model": "adaptive_vfi",
+      "output_path": "outputs/benchmark/adaptive_vfi.mp4",
+      "frame_count": 1185,
+      "fps": 120,
+      "duration_seconds": 9.88,
+      "resolution": "3840x2160",
+      "processing_time": 85.5,
+      "file_size_mb": 166.06,
+      "bitrate_mbps": 141.07,
+      "vfi_method": "adaptive",
+      "sr_method": "adaptive_vfi",
+      "is_control": false,
+      "is_degraded": false,
+      "psnr_db": 13.37,
+      "ssim": 0.2583
+    }
+  ],
+  "detailed_per_clip_results": {
+    "arc_raiders_001": {
+      "bicubic": {
+        "model": "Bicubic",
+        "model_info": {
+          "name": "Bicubic",
+          "type": "traditional",
+          "supports_vfi": false,
+          "supports_sr": true,
+          "supports_joint": false,
+          "parameters": 0,
+          "requires_gpu": false,
+          "description": "Bicubic interpolation - simplest baseline"
+        },
+        "num_triplets": 5,
+        "quality_summary": {
+          "psnr": {
+            "mean": 19.583457946777344,
+            "std": 2.3484354787207473,
+            "min": 18.08266258239746,
+            "max": 24.233779907226562,
+            "p50": 18.291698455810547,
+            "p95": 23.19585838317871
+          },
+          "ssim": {
+            "mean": 0.5935602343870151,
+            "std": 0.10281729485778131,
+            "min": 0.5314812079272992,
+            "max": 0.7983520670151018,
+            "p50": 0.5415694575922878,
+            "p95": 0.7505359780485261
+          },
+          "lpips": {
+            "mean": 0.3199701517820358,
+            "std": 0.06509879448913992,
+            "min": 0.19786404073238373,
+            "max": 0.3779207468032837,
+            "p50": 0.35298433899879456,
+            "p95": 0.37463371753692626
+          }
+        },
+        "speed_summary": {
+          "time_ms": {
+            "mean": 28.46185400003378,
+            "std": 8.124284498370642,
+            "p50": 24.6603769999183,
+            "p95": 40.94538240001384,
+            "p99": 43.338066880014594
+          },
+          "vram_mb": {
+            "mean": 14.7243008,
+            "max": 18.405376
+          },
+          "throughput_fps": 175.67372807105488
+        },
+        "quality_per_triplet": [
+          {
+            "psnr": 24.233779907226562,
+            "ssim": 0.7983520670151018,
+            "lpips": 0.19786404073238373,
+            "ms_ssim": 0.8502161389874031,
+            "flolpips": null
+          },
+          {
+            "psnr": 19.044172286987305,
+            "ssim": 0.559271622182224,
+            "lpips": 0.3095960319042206,
+            "ms_ssim": 0.5620430316733259,
+            "flolpips": null
+          },
+          {
+            "psnr": 18.264976501464844,
+            "ssim": 0.5415694575922878,
+            "lpips": 0.3614856004714966,
+            "ms_ssim": 0.510826914295711,
+            "flolpips": null
+          },
+          {
+            "psnr": 18.08266258239746,
+            "ssim": 0.5314812079272992,
+            "lpips": 0.3779207468032837,
+            "ms_ssim": 0.49676803763807525,
+            "flolpips": null
+          },
+          {
+            "psnr": 18.291698455810547,
+            "ssim": 0.5371268172181634,
+            "lpips": 0.35298433899879456,
+            "ms_ssim": 0.5143607484678238,
+            "flolpips": null
+          }
+        ],
+        "speed_per_triplet": [
+          {
+            "inference_time_ms": 43.93623800001478,
+            "vram_peak_mb": 0.0
+          },
+          {
+            "inference_time_ms": 23.233366000113165,
+            "vram_peak_mb": 18.405376
+          },
+          {
+            "inference_time_ms": 24.6603769999183,
+            "vram_peak_mb": 18.405376
+          },
+          {
+            "inference_time_ms": 28.981960000010076,
+            "vram_peak_mb": 18.405376
+          },
+          {
+            "inference_time_ms": 21.497329000112586,
+            "vram_peak_mb": 18.405376
+          }
+        ]
+      }
+    }
+  },
+  "sota_metadata": {
+    "clip_name": "sota_rife",
+    "models": [
+      "rife_bicubic",
+      "rife_lanczos"
+    ],
+    "resolution": "3840x1080",
+    "fps": 120,
+    "vfi_method": "RIFE",
+    "duration_seconds": 10.0,
+    "pipeline": "0.5x_down_2.0x_up_rife",
+    "clips": [
+      {
+        "model": "rife_bicubic",
+        "output_path": "outputs/blind_study_videos/rife_bicubic_h264.mp4",
+        "frame_count": 1197,
+        "fps": 120,
+        "duration_seconds": 9.975,
+        "resolution": "3840x1080",
+        "processing_time": 183.84700870513916,
+        "processing_fps": 6.510848386550549,
+        "realtime_factor": 0.054257069887921235
+      },
+      {
+        "model": "rife_lanczos",
+        "output_path": "outputs/blind_study_videos/rife_lanczos_h264.mp4",
+        "frame_count": 1197,
+        "fps": 120,
+        "duration_seconds": 9.975,
+        "resolution": "3840x1080",
+        "processing_time": 184.79154706001282,
+        "processing_fps": 6.47756901786889,
+        "realtime_factor": 0.053979741815574085
+      }
+    ]
+  },
+  "summary": {
+    "total_sources": 5,
+    "total_benchmark_runs": 3,
+    "total_methods": 8,
+    "methods_list": [
+      "control",
+      "degraded",
+      "lanczos",
+      "rife_lanczos",
+      "adaptive_vfi",
+      "bicubic",
+      "optical_flow",
+      "rife_bicubic"
+    ]
+  }
+}

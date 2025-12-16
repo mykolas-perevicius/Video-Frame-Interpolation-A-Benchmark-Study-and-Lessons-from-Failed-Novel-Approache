@@ -1,0 +1,17 @@
+{
+  "clips": [
+    {
+      "clip_id": "arc_raiders_001",
+      "source": "/home/myko/CS474/gaming-vfisr-complete/data/raw/clip1.mp4",
+      "duration_s": 87.32,
+      "fps": 60.0,
+      "resolution": "3840x1080",
+      "codec": "hevc",
+      "frame_count": 5178,
+      "intervals_count": 5,
+      "registered": "2025-12-16T02:54:30.195836",
+      "last_processed": "2025-12-16T03:10:42.946099"
+    }
+  ],
+  "version": "1.0"
+}

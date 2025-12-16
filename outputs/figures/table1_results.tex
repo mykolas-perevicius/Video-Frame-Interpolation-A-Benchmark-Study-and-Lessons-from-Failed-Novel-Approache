@@ -1,0 +1,28 @@
+\begin{table}[htbp]
+\centering
+\caption{Complete VFI+SR Benchmark Results}
+\label{tab:results}
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Rank} & \textbf{Method} & \textbf{VFI PSNR} & \textbf{KF PSNR} & \textbf{Time (s)} & \textbf{RIFE \%} \\
+\midrule
+1 & adaptive\_aggressive & 25.82 dB & 35.65 dB & 66.7 & 97\% \\
+2 & rife\_default & 25.80 dB & 35.65 dB & 67.9 & 100\% \\
+3 & ughi\_default & 24.02 dB & 35.65 dB & 378.0 & 0\% \\
+4 & lanczos\_blend & 24.01 dB & 35.65 dB & 20.7 & 0\% \\
+5 & bicubic\_blend & 24.00 dB & 35.40 dB & 20.8 & 0\% \\
+6 & adaptive\_default & 23.92 dB & 35.65 dB & 25.0 & 5\% \\
+7 & bicubic\_blend\_edge & 23.80 dB & 35.40 dB & 19.9 & 0\% \\
+8 & lanczos\_blend\_edge & 23.79 dB & 35.65 dB & 23.4 & 0\% \\
+9 & adaptive\_conservative & 23.79 dB & 35.65 dB & 21.7 & 0\% \\
+10 & mcar\_default & 23.79 dB & 35.65 dB & 60.5 & 0\% \\
+11 & mcar\_aggressive & 23.79 dB & 35.65 dB & 59.2 & 0\% \\
+12 & lanczos\_blend\_sharp & 23.61 dB & 35.65 dB & 22.6 & 0\% \\
+13 & uafi\_default & 22.71 dB & 35.65 dB & 244.8 & 0\% \\
+14 & optical\_flow\_basic & 22.45 dB & 35.65 dB & 40.9 & 0\% \\
+15 & degraded & 22.28 dB & 35.40 dB & 24.3 & 0\% \\
+16 & optical\_flow\_edge & 22.27 dB & 35.65 dB & 61.6 & 0\% \\
+17 & optical\_flow\_sharp & 22.13 dB & 35.65 dB & 75.9 & 0\% \\
+\bottomrule
+\end{tabular}
+\end{table}

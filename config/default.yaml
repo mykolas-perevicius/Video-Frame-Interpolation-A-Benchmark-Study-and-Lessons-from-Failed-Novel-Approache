@@ -1,0 +1,70 @@
+# Default configuration for Gaming VFI+SR project
+
+# Input/Output settings
+input_resolution: "1080p"
+input_fps: 60        # Source video FPS
+target_resolution: "1080p"
+target_fps: 120      # 2x frame interpolation
+
+# Degradation settings (for VFI experiments)
+degraded_resolution: "540p"  # Downscale to test SR
+upscale_factor: 2
+
+# Benchmark settings
+num_warmup_iterations: 5
+max_triplets_per_clip: null  # null = all
+force_interval: null         # Optional: force start time (e.g., 9.3)
+
+# Pre-computed intervals (recommended for rigorous benchmarks)
+clips:
+  default_clip: "arc_raiders_001"
+  intervals_per_clip: 10
+  interval_duration: 10       # seconds
+  auto_difficulty: true       # Spread intervals across difficulty levels
+
+# Statistical analysis
+statistics:
+  min_runs_per_method: 5      # Minimum n for significance tests
+  confidence_level: 0.95      # For confidence intervals
+  effect_size_threshold: 0.5  # Cohen's d for "meaningful" difference
+
+# Quality metrics
+metrics:
+  - keyframe_psnr    # Keyframe reconstruction quality
+  - vfi_psnr         # VFI interpolation quality (t=0.5)
+  - overall_psnr     # Weighted combination (25%/75%)
+  - ssim
+  - lpips
+
+# Models to benchmark
+models:
+  # Reference
+  - control
+  - degraded
+
+  # Traditional
+  - lanczos_blend
+  - lanczos_blend_edge
+  - bicubic_blend
+  - optical_flow_basic
+  - optical_flow_edge
+
+  # Neural
+  - rife_default
+
+  # Adaptive
+  - adaptive_conservative
+  - adaptive_default
+  - adaptive_aggressive
+
+  # Novel (Research)
+  - mcar_default
+  - mcar_aggressive
+  - uafi_default
+  - ughi_default
+
+# Output settings
+save_model_outputs: true
+generate_visualizations: true
+output_video_codec: "libx264"
+output_video_crf: 18

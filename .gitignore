@@ -1,0 +1,76 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Linting
+.ruff_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+outputs/experiment_videos/*.mp4
+outputs/blind_study_videos/*.mp4
+outputs/model_outputs/*.mp4
+outputs/benchmark/*.json
+outputs/benchmarks/*.json
+data/raw/*.mp4
+data/processed/
+*.log
+*.nohup.log
+
+# Large model files
+*.pkl
+*.pth
+*.pt
+external/Practical-RIFE/train_log/*.pkl
+
+# Temporary files
+*.tmp
+*.temp
+
+# Cached intervals (large binary data)
+data/clips/*/intervals/*/*.npz

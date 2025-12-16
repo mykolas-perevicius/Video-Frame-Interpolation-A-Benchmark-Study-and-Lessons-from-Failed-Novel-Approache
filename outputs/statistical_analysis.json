@@ -1,0 +1,171 @@
+{
+  "generated_at": "2025-12-15T23:43:05.159741",
+  "interval_analysis": [
+    {
+      "interval_id": "11.3",
+      "baseline_psnr": 35.4,
+      "baseline_ssim": 0.9623,
+      "difficulty": "EASY",
+      "n_experiments": 9
+    },
+    {
+      "interval_id": "53.6",
+      "baseline_psnr": 31.2,
+      "baseline_ssim": 0.9791,
+      "difficulty": "HARD",
+      "n_experiments": 11
+    }
+  ],
+  "method_statistics": [
+    {
+      "method": "uafi_default",
+      "n_intervals": 1,
+      "mean_psnr_gain": 0.3200000000000003,
+      "std_psnr_gain": 0.0,
+      "ci_95_low": 0.3200000000000003,
+      "ci_95_high": 0.3200000000000003,
+      "mean_time_ratio": 18.006225680933852
+    },
+    {
+      "method": "ughi_default",
+      "n_intervals": 1,
+      "mean_psnr_gain": 0.3200000000000003,
+      "std_psnr_gain": 0.0,
+      "ci_95_low": 0.3200000000000003,
+      "ci_95_high": 0.3200000000000003,
+      "mean_time_ratio": 31.67704280155642
+    },
+    {
+      "method": "lanczos_blend_edge",
+      "n_intervals": 2,
+      "mean_psnr_gain": 0.245000000000001,
+      "std_psnr_gain": 0.10606601717798111,
+      "ci_95_low": -0.7079653552323969,
+      "ci_95_high": 1.197965355232399,
+      "mean_time_ratio": 1.3545517711860124
+    },
+    {
+      "method": "optical_flow_edge",
+      "n_intervals": 2,
+      "mean_psnr_gain": 0.245000000000001,
+      "std_psnr_gain": 0.10606601717798111,
+      "ci_95_low": -0.7079653552323969,
+      "ci_95_high": 1.197965355232399,
+      "mean_time_ratio": 1.632149173783415
+    },
+    {
+      "method": "bicubic_blend_edge",
+      "n_intervals": 2,
+      "mean_psnr_gain": 0.21000000000000085,
+      "std_psnr_gain": 0.21213203435596223,
+      "ci_95_low": -1.695930710464795,
+      "ci_95_high": 2.115930710464797,
+      "mean_time_ratio": 0.9414839051998585
+    },
+    {
+      "method": "optical_flow_basic",
+      "n_intervals": 2,
+      "mean_psnr_gain": 0.1800000000000015,
+      "std_psnr_gain": 0.07071067811865826,
+      "ci_95_low": -0.45531023682163474,
+      "ci_95_high": 0.8153102368216377,
+      "mean_time_ratio": 1.711148870584668
+    },
+    {
+      "method": "lanczos_blend",
+      "n_intervals": 2,
+      "mean_psnr_gain": 0.1800000000000015,
+      "std_psnr_gain": 0.07071067811865826,
+      "ci_95_low": -0.45531023682163474,
+      "ci_95_high": 0.8153102368216377,
+      "mean_time_ratio": 1.0641480115215525
+    },
+    {
+      "method": "degraded",
+      "n_intervals": 2,
+      "mean_psnr_gain": 0.0,
+      "std_psnr_gain": 0.0,
+      "ci_95_low": NaN,
+      "ci_95_high": NaN,
+      "mean_time_ratio": 1.0
+    },
+    {
+      "method": "bicubic_blend",
+      "n_intervals": 2,
+      "mean_psnr_gain": 0.0,
+      "std_psnr_gain": 0.0,
+      "ci_95_low": NaN,
+      "ci_95_high": NaN,
+      "mean_time_ratio": 1.0924452978927686
+    },
+    {
+      "method": "optical_flow_sharp",
+      "n_intervals": 2,
+      "mean_psnr_gain": -0.40999999999999837,
+      "std_psnr_gain": 0.4525483399593883,
+      "ci_95_low": -4.47598551565825,
+      "ci_95_high": 3.6559855156582532,
+      "mean_time_ratio": 1.6871974329172774
+    },
+    {
+      "method": "lanczos_blend_sharp",
+      "n_intervals": 2,
+      "mean_psnr_gain": -0.40999999999999837,
+      "std_psnr_gain": 0.4525483399593883,
+      "ci_95_low": -4.47598551565825,
+      "ci_95_high": 3.6559855156582532,
+      "mean_time_ratio": 1.1358974682904643
+    }
+  ],
+  "novel_comparisons": [
+    {
+      "novel": "uafi_default",
+      "baseline": "lanczos_blend",
+      "diff": 0.19000000000000128,
+      "effect_size": Infinity,
+      "comparison_type": "paired",
+      "confidence": "MEDIUM"
+    },
+    {
+      "novel": "uafi_default",
+      "baseline": "lanczos_blend_edge",
+      "diff": 0.0,
+      "effect_size": 0,
+      "comparison_type": "paired",
+      "confidence": "MEDIUM"
+    },
+    {
+      "novel": "uafi_default",
+      "baseline": "bicubic_blend_edge",
+      "diff": -0.03999999999999915,
+      "effect_size": Infinity,
+      "comparison_type": "paired",
+      "confidence": "MEDIUM"
+    },
+    {
+      "novel": "ughi_default",
+      "baseline": "lanczos_blend",
+      "diff": 0.19000000000000128,
+      "effect_size": Infinity,
+      "comparison_type": "paired",
+      "confidence": "MEDIUM"
+    },
+    {
+      "novel": "ughi_default",
+      "baseline": "lanczos_blend_edge",
+      "diff": 0.0,
+      "effect_size": 0,
+      "comparison_type": "paired",
+      "confidence": "MEDIUM"
+    },
+    {
+      "novel": "ughi_default",
+      "baseline": "bicubic_blend_edge",
+      "diff": -0.03999999999999915,
+      "effect_size": Infinity,
+      "comparison_type": "paired",
+      "confidence": "MEDIUM"
+    }
+  ],
+  "methodology_notes": "\n## Experimental Methodology Notes\n\n### Data Collection\n- Experiments conducted on 5-second video intervals\n- Different intervals selected randomly to test method robustness\n- Each experiment produces 589 frames (30fps \u2192 120fps interpolation)\n\n### Normalization Approach\nDue to varying motion complexity across video intervals, we normalize\nresults relative to a baseline method ('degraded' = frame duplication)\non each interval. This allows fair comparison of methods tested on\ndifferent intervals.\n\n**PSNR Gain** = Method PSNR - Baseline PSNR (same interval)\n\n### Statistical Considerations\n1. **Paired comparisons**: When methods tested on same interval,\n   direct comparison is valid with high confidence\n2. **Cross-interval comparisons**: When methods tested on different\n   intervals, we use normalized gains with lower confidence\n3. **Effect sizes**: Cohen's d reported for magnitude of differences\n4. **Confidence intervals**: 95% CI computed where n > 1\n\n### Limitations\n- Limited number of intervals per method (n=1-2)\n- Bootstrap confidence intervals would require more data\n- Visual quality not captured by PSNR alone\n\n### Recommendations for Future Work\n- Test all methods on 5+ intervals for statistical power\n- Include temporal consistency metrics (tOF, flicker score)\n- Conduct user study for perceptual validation\n"
+}
