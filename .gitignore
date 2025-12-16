@@ -52,6 +52,8 @@ htmlcov/
 Thumbs.db
 
 # Project specific
+outputs/experiment_results.json
+outputs/experiment_log.txt
 outputs/experiment_videos/*.mp4
 outputs/blind_study_videos/*.mp4
 outputs/model_outputs/*.mp4
